@@ -5,6 +5,7 @@
   "main": "src/bin.ts",
   "type": "module",
   "scripts": {
+    "test": "vitest",
     "build": "tsup",
     "dev": "tsup --watch",
     "lint": "eslint . --ext .ts",
@@ -46,7 +47,8 @@
   "devDependencies": {
     "@types/node": "^22.15.21",
     "tsup": "^8.5.0",
-    "typescript": "^5.8.3"
+    "typescript": "^5.8.3",
+    "vitest": "^3.1.4"
   },
   "dependencies": {
     "commander": "^14.0.0"
