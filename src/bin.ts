@@ -13,4 +13,5 @@ program
 .description('Read and pretty-print a JSON file')
 .action(viewCommand);
 
-program.parse();
+program.showHelpAfterError();
+program.parse(process.argv);
