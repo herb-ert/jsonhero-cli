@@ -2,9 +2,13 @@
   "name": "jsonhero-cli",
   "version": "0.0.1",
   "description": "jsonhero-cli is a powerful and developer-friendly command-line tool for exploring, transforming, and inspecting JSON files. Whether you're dealing with massive API responses, debugging nested configurations, or working with structured logs, jsonhero-cli helps you navigate and manipulate JSON like a hero — right from your terminal.",
-  "main": "bin.ts",
+  "main": "src/bin.ts",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "lint": "eslint . --ext .ts",
+    "format": "prettier --write ."
   },
   "repository": {
     "type": "git",
@@ -12,6 +16,9 @@
   },
   "author": "herb-ert",
   "license": "MIT",
+  "bin": {
+    "jsonhero": "./dist/bin.js"
+  },
   "keywords": [
     "json",
     "cli",
@@ -35,5 +42,12 @@
   "bugs": {
     "url": "https://github.com/herb-ert/jsonhero-cli/issues"
   },
-  "homepage": "https://github.com/herb-ert/jsonhero-cli#readme"
+  "homepage": "https://github.com/herb-ert/jsonhero-cli#readme",
+  "devDependencies": {
+    "tsup": "^8.5.0",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "commander": "^14.0.0"
+  }
 }
