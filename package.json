@@ -44,6 +44,7 @@
   },
   "homepage": "https://github.com/herb-ert/jsonhero-cli#readme",
   "devDependencies": {
+    "@types/node": "^22.15.21",
     "tsup": "^8.5.0",
     "typescript": "^5.8.3"
   },
